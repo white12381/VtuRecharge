@@ -7,7 +7,7 @@ import sanusuHakeem from "../images/sanusi hakeem (2).jpg"
 import AbbasJoda from "../images/Abbas Joda.jpg"
 import AbdullahTaiwo from "../images/Abdullah Taiwo.jpg"
 import AbdulHamidOyebo from "../images/Abdulhamid-Oyebo.jpeg"
-import { Splide, SplideTrack } from '@splidejs/react-splide';
+import { Splide } from '@splidejs/react-splide';
 import Testimonial from "../components/testimony"
 export default function HomePage() {
   const mouseEnter1 = (id1,id2) => {
@@ -256,7 +256,7 @@ idd2.classList.add('hidden')
         </div>
         </div>
       <h1 className='text-zinc-300 mt-12 text-center lg:text-xl'>Copyright ©2023 Vturecharge</h1>
-      <div className='my-10 text-center -mx-20 text-white text-lg p-3 bg-blue-900'>
+      <div className='my-10 text-center -mx-16 text-white text-lg p-3 bg-blue-900'>
         Developed by WhiteMan Developer
       </div>
       </div>
