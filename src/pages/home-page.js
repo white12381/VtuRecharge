@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '@splidejs/react-splide/css/skyblue';
 import MtnDataBundle from "../components/mtn-data-bundle"
 import runningman from "../images/running-man.svg"
@@ -49,9 +50,9 @@ idd2.classList.add('hidden')
         </div>
        <div className='flex-col lg:flex-row justify-center space-y-4 lg:space-y-0 lg:space-x-12 text-white hidden lg:flex' id='menuList'>
         <div className="home-link">HOME</div>
-        <div className="home-link">ABOUT US</div>
-        <div className="home-link">SERVICES</div>
-        <div className="home-link">LOGIN</div>
+        <a className="home-link" href='#aboutUs'>ABOUT US</a>
+        <a className="home-link" href='#services'>SERVICES</a>
+        <Link to='/login' className="home-link">LOGIN</Link>
         <div className="home-link">REGISTER</div>
         </div>
       </div>
@@ -61,9 +62,9 @@ idd2.classList.add('hidden')
       <p className="my-8 text-white text-xl font-extrabold">Buy cheap and affordable plan.</p>
       <div className="flex space-x-5">
         <div className="bg-blue-900 p-2 rounded-md cursor-pointer text-white">Register Now !</div>
-        <div className="bg-yellow-300 p-3 cursor-pointer">Login
+        <Link to='/login' className="bg-yellow-300 p-3 cursor-pointer">Login
         <div className="ml-1 w-3 h-3  border border-white inline-block"></div>
-         </div>
+         </Link>
       </div>
       </div> 
       <div className="grid grid-cols-1 lg:grid-cols-3 m-10 justify-evenly lg:space-x-8 space-y-6 lg:space-y-0">
@@ -113,7 +114,7 @@ idd2.classList.add('hidden')
         <div>
           <img  src={ladysmiling} alt="Lady Smiling" className="h-full p-4 lg:p-0" />
         </div>
-        <div className="p-2 py-10 lg:p-14">
+        <div className="p-2 py-10 lg:p-14" id='services'>
         <h1 className="text-2xl lg:text-3xl mb-6  font-black">Welcome to Vturecharge</h1>
         <p className="text-zinc-700 lg:pr-10 font-semibold">We provide reasonably priced Data Bundles, Airtime Topup, Cablesub, and Energy Bill Payment.</p>
       <MtnDataBundle price={"#28"} data={"50MB"} />
@@ -192,7 +193,7 @@ idd2.classList.add('hidden')
       <Testimonial text="I like how quickly concerns are resolved. We may get along just fine. Thus far, so good. There isn't a star here, yet I give it 5 stars." occupation="Web Developer" name="Abdullah Taiwo" image={AbdullahTaiwo}  />
       <Testimonial text="Excellent website, which I urge any data resellers to use for quick data delivery... Kudos" name="Oyebo Hamid" occupation="Software Developer" image={AbdulHamidOyebo} />
       </Splide>
-      <div className='bg-black p-16 mt-10'>
+      <div className='bg-black p-16 mt-10' id='aboutUs'>
         <div className=' flex justify-between lg:space-x-24 flex-col lg:flex-row'>
         <div className=' w-full lg:w-1/4'>
           <p className='text-zinc-300 text-lg -mb-1' >Join our whatsapp group</p>
@@ -201,37 +202,37 @@ idd2.classList.add('hidden')
       Welcome to Vturecharge, a company that deals with the sales of Affordable internet Data Plans.
           </p>
           <div className='flex justify-around mt-10'>
-          <div className="bg-zinc-700 cursor-pointer hover:bg-zinc-800   w-12 h-12 rounded-[50%]">
+          <Link to='/login' className="bg-zinc-700 cursor-pointer hover:bg-zinc-800   w-12 h-12 rounded-[50%]">
                 <div className="w-3 h-3 mx-auto mt-5 border border-white">
                 </div>
-                </div>
-          <div className="bg-zinc-700 cursor-pointer hover:bg-zinc-800  w-12 h-12 rounded-[50%]">
+                </Link>
+          <Link to='/login' className="bg-zinc-700 cursor-pointer hover:bg-zinc-800  w-12 h-12 rounded-[50%]">
                 <div className="w-3 h-3 mx-auto mt-5 border border-white">
                 </div>
-                </div>
-          <div className="bg-zinc-700 cursor-pointer hover:bg-zinc-800   w-12 h-12 rounded-[50%]">
+                </Link>
+          <Link to='/login' className="bg-zinc-700 cursor-pointer hover:bg-zinc-800   w-12 h-12 rounded-[50%]">
                 <div className="w-3 h-3 mx-auto mt-5 border border-white">
                 </div>
-                </div>
+                </Link>
             </div>
         </div>
         <div className='text-white lg:w-1/3'>
           <div className='text-2xl text-white my-8'>Services</div>
-          <div>
+          <Link to='/login'>
           <div className="w-3 h-3 mx-auto inline-block mr-3 border border-white">
                 </div>
             Buy Data
-          </div>
-          <div className='mt-5'>
+          </Link>
+          <Link to='/login' className='mt-5 block'>
           <div className="w-3 h-3 mx-auto inline-block mr-3 border border-white">
                 </div>
             Buy Airtime
-          </div>
-          <div className='mt-5'>
+          </Link>
+          <Link to='/login' className='mt-5 block'>
           <div className="w-3 h-3 mx-auto inline-block mr-3 border border-white">
                 </div>
             Utilities Payment
-          </div>
+          </Link>
         </div>
         <div className='text-white'>
         <div className='text-2xl text-white my-8'>Contact information</div>
