@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Login = () => {
 return <div className="bg-blue-900 h-[100vh] pt-20">
 <div className="bg-white md:w-2/3 lg:w-[35%] h-[470px] rounded-3xl mx-5 md:mx-auto">
@@ -13,7 +15,7 @@ return <div className="bg-blue-900 h-[100vh] pt-20">
 </div>
 </form>
 <p className="text-center mt-6">
-    Don't have an account yet ? <a href="#j" className="cursor-pointer font-semibold text-blue-900">Sign Up</a>
+    Don't have an account yet ? <Link to='/register' className="cursor-pointer font-semibold text-blue-900">Sign Up</Link>
 </p>
 </div>
 </div>

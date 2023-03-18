@@ -53,7 +53,7 @@ idd2.classList.add('hidden')
         <a className="home-link" href='#aboutUs'>ABOUT US</a>
         <a className="home-link" href='#services'>SERVICES</a>
         <Link to='/login' className="home-link">LOGIN</Link>
-        <div className="home-link">REGISTER</div>
+        <Link to='/register' className="home-link">REGISTER</Link>
         </div>
       </div>
       <div className='bg-image h-[500px] py-32 px-10 lg:px-20'>  
