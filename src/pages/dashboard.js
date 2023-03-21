@@ -47,4 +47,4 @@ Magna in sunt consectetur proident ad quis anim non excepteur nulla sunt consequ
     </div>
 }
 
-export default Dashboard
+export default Dashboard;
