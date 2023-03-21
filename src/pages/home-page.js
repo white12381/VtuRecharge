@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import '@splidejs/react-splide/css/skyblue';
-import MtnDataBundle from "../components/mtn-data-bundle"
-import runningman from "../images/running-man.svg"
-import securesheild from "../images/secure-shield.svg"
+import MtnDataBundle from "../components/mtn-data-bundle"  
 import ladysmiling from "../images/Lady-smiling.jpeg"
 import sanusuHakeem from "../images/sanusi hakeem (2).jpg"
 import AbbasJoda from "../images/Abbas Joda.jpg"
@@ -10,6 +8,8 @@ import AbdullahTaiwo from "../images/Abdullah Taiwo.jpg"
 import AbdulHamidOyebo from "../images/Abdulhamid-Oyebo.jpeg"
 import { Splide } from '@splidejs/react-splide';
 import Testimonial from "../components/testimony"
+import RunningManIcon from '../icon/RunningManIcon';
+import SecureShieldIcon from '../icon/SecureShieldIcon';
 export default function HomePage() {
   const mouseEnter1 = (id1,id2) => {
 const idd1 = document.getElementById(id1);
@@ -61,7 +61,7 @@ idd2.classList.add('hidden')
       <p className="text-zinc-300 text-3xl lg:text-[50px] font-extrabold leading-none lg:w-3/6">Vturecharge for everyone</p>
       <p className="my-8 text-white text-xl font-extrabold">Buy cheap and affordable plan.</p>
       <div className="flex space-x-5">
-        <div className="bg-blue-900 p-2 rounded-md cursor-pointer text-white">Register Now !</div>
+        <Link to='/register' className="bg-blue-900 p-2 rounded-md cursor-pointer text-white">Register Now !</Link>
         <Link to='/login' className="bg-yellow-300 p-3 cursor-pointer">Login
         <div className="ml-1 w-3 h-3  border border-white inline-block"></div>
          </Link>
@@ -83,8 +83,8 @@ idd2.classList.add('hidden')
         </div>
 
         <div className="bg-white relative pt-8"  onMouseEnter={() => mouseEnter1("runningman","box2")} onMouseLeave={() => mouseLeave1("runningman","box2")}>
-            <div className="bg-zinc-300 p-2 h-28 rounded-[50%] w-28  mx-auto" id="runningman">
-<img  src={runningman} className="w-2/3 mx-auto pt-5" alt="runingman"/>
+            <div className="bg-zinc-300 p-2 h-28 rounded-[50%] w-28  mx-auto" id="runningman"> 
+<RunningManIcon className="w-2/3 mx-auto pt-5" />
             </div>
             <p className="text-center my-3 text-lg font-black">You're Safe</p>
             <div className="text-lg text-zinc-700  px-12 pb-10">
@@ -98,7 +98,8 @@ idd2.classList.add('hidden')
         
         <div className="bg-white relative pt-8"  onMouseEnter={() => mouseEnter1("secure-shield","box3")} onMouseLeave={() => mouseLeave1("secure-shield","box3")}>
             <div className="bg-zinc-300 p-2 h-28 rounded-[50%] w-28  mx-auto" id="secure-shield">
-<img  src={securesheild} className="w-2/3 mx-auto pt-5" alt="runingman"/>
+{/* <img  src={securesheild} className="w-2/3 mx-auto pt-5" alt="runingman"/> */}
+<SecureShieldIcon className="w-2/3 mx-auto pt-5" />
             </div>
             <p className="text-center my-3 text-lg font-black">We're Reliable</p>
             <div className="text-lg text-zinc-700  px-12 pb-10">

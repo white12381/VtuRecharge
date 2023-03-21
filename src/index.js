@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { MenuProvider } from './context/menuContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <MenuProvider>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  </MenuProvider>
 );
 
 // If you want your app to work offline and load faster, you can change

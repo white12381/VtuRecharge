@@ -22,7 +22,7 @@ return <div className="bg-blue-900 py-20">
     <p className="text-blue-900 text-sm">Enter same password as before </p>
     <input type="checkbox" className="mt-6 mr-2" required />
     <label className="text-blue-900 font-bold">I Agree the terms and conditions</label>
-    <button type="submit" className="bg-blue-900 mt-6 text-white p-3 mx-auto block">Sign In</button>
+    <button type="submit" className="bg-blue-900 mt-6 text-white p-3 mx-auto block">Sign Up</button>
 </form>
 <p className="text-center mt-6">
     Already a member? <Link to='/login' className="cursor-pointer font-semibold text-blue-900">Sign In</Link>
