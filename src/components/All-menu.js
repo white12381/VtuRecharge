@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "../pages/dashboard";
 import BuyData from "./buy-data";
+import BuyAirtime from "../pages/Buy-Airtime";
 const AllMenu = () =>  { 
     const expandWidth = useContext(menuContext).expandWidth;
 return <div>
@@ -15,6 +16,7 @@ return <div>
     <Routes>
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/buydata" element={<BuyData />} />
+        <Route  path="/buyairtime" element={<BuyAirtime/>} />
     </Routes>
     </div>
 </div>

@@ -35,12 +35,12 @@ return <div className={`bg-slate-700  lg:h-5/6 h-[90vh] fixed top-18  font-bold 
         Buy Data
     </div>
 </Link>
-<div className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
+<Link to='/buyairtime' className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
     <CallIcon className="w-10 h-10 mx-auto"/>
     <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>
         Buy Airtime
     </div>
-</div>
+</Link>
 <div className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
     <PaymentIcon  className="w-10 h-10 mx-auto" />
     <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>
