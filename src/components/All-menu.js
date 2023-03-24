@@ -11,7 +11,7 @@ return <div>
 <Navbar />
 <div className="flex">
     <Sidebar/>
-    <div className={`text-black bg-orange-300 border-red-600 ${expandWidth ? 'w-full md:w-2/3 lg:w-full ml-[190px] lg:ml-[320px] md:ml-[258px]' : 'w-full  md:ml-20' }`}>
+    <div className={`${expandWidth ? 'w-52 md:w-2/3 lg:w-full ml-[190px] lg:ml-[320px] md:ml-[258px]' : 'w-full  md:ml-20' }`}>
     <Routes>
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/buydata" element={<BuyData />} />
