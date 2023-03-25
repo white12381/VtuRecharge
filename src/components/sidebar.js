@@ -41,12 +41,18 @@ return <div className={`bg-slate-700  lg:h-5/6 h-[90vh] fixed top-18  font-bold 
         Buy Airtime
     </div>
 </Link>
-<div className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
+<details className="mx-auto text-white"> 
+   <summary className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg">
     <PaymentIcon  className="w-10 h-10 mx-auto" />
     <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>
         Utilities Payment
     </div>
-</div>
+    </summary>
+    <ol className={`text-center flex-col space-y-5 mt-5  ${expandWidth ? 'block' : 'hidden'}`}>
+       <Link to='/electricity'> <li>Electricity Payment</li> </Link>
+        <li>Subscription Payment</li>
+    </ol>
+</details>
 <div className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
     <WalletIcon className="w-10 h-10 mx-auto" />
     <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>

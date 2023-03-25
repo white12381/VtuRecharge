@@ -3,7 +3,7 @@ import menuContext from "../context/menuContext";
 
 const BuyAirtime = () => {
     const expandWidth = useContext(menuContext).expandWidth;
-    return <div className="pl-5">
+    return <div>
          <h1 className="text-center text-2xl mb-5  mt-5">Buy Airtime</h1>
          <form className="text-slate-700 mt-10 lg:mt-0 p-5 bg-slate-100 my-3  mx-5 rounded-3xl">
 <label htmlFor="network" className="block font-bold">Network*</label>

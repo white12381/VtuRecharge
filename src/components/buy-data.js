@@ -3,7 +3,7 @@ import menuContext from "../context/menuContext";
 
 const BuyData = () => {
     const expandWidth = useContext(menuContext).expandWidth;
-    return <div className="pl-5">
+    return <div>
  <h1 className="text-center text-2xl  mt-5">Buy Data Plan</h1>
  <div className="flex  flex-col-reverse lg:flex-row justify-between p-5 bg-slate-100 my-3  mx-5 rounded-3xl">
  <form className="text-slate-700 mt-10 lg:mt-0">
