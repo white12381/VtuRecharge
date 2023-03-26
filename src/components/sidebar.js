@@ -48,10 +48,10 @@ return <div className={`bg-slate-700  lg:h-5/6 h-[90vh] fixed top-18  font-bold 
         Utilities Payment
     </div>
     </summary>
-    <ol className={`text-center flex-col space-y-5 mt-5  ${expandWidth ? 'block' : 'hidden'}`}>
-       <Link to='/electricity'> <li>Electricity Payment</li> </Link>
-        <li>Subscription Payment</li>
-    </ol>
+    <div className={`text-center flex flex-col space-y-7 mt-7  ${expandWidth ? 'block' : 'hidden'}`}>
+       <Link to='/electricity'> Electricity Payment </Link>
+       <Link to='/cablesubscription' > Cable Subscription </Link>
+    </div>
 </details>
 <div className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
     <WalletIcon className="w-10 h-10 mx-auto" />

@@ -9,4 +9,9 @@
     background-image: url("./images/HomeBackgroundImage.png");
     background-size: cover;
 } 
- 
+.formlabel{
+    @apply block font-bold
+}
+.bottomlabel{
+    @apply -mt-8 mb-10 text-slate-900  text-sm
+}
