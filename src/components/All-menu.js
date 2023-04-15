@@ -8,6 +8,7 @@ import BuyData from "../pages/buy-data";
 import BuyAirtime from "../pages/Buy-Airtime";
 import Electricity from "../pages/Electricity";
 import CableSubscription from "../pages/cable-subscription";
+import FundWallet from "../pages/fundWallet";
 const AllMenu = () =>  { 
     const expandWidth = useContext(menuContext).expandWidth;
 return <div>
@@ -21,6 +22,7 @@ return <div>
         <Route  path="/buyairtime" element={<BuyAirtime/>} />
         <Route path="/electricity" element={<Electricity/>} />
         <Route path="/cablesubscription" element={<CableSubscription/>} />
+        <Route path="/fundwallet" element={<FundWallet/>} />
     </Routes>
     </div>
 </div>
