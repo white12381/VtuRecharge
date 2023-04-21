@@ -20,7 +20,7 @@ const mouseLeave = () => {
     setExpandWidth(false);
     }
 }
-return <div className={`bg-slate-700 transition-all duration-500 lg:h-5/6 h-[90vh] fixed top-18  font-bold flex flex-col  space-y-10 py-10 ${expandWidth ? 'w-58 md:w-92 lg:w-80' : 'w-20' }  ${expandWidth ? 'flex' : 'hidden md:flex'}  overflow-auto`}  onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+return <div className={`bg-slate-700 transition-all duration-500 ease-linear  lg:h-5/6 h-[90vh] fixed top-18  font-bold flex flex-col  space-y-10 py-10 ${expandWidth ? 'w-58 md:w-92 lg:w-80' : 'w-20' }  ${expandWidth ? 'flex' : 'hidden md:flex'}  overflow-auto`}  onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
 <Link to='/dashboard' className="text-white mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg">
     <div> 
     <HomeIcon className="w-10 h-10 mx-auto"/>
