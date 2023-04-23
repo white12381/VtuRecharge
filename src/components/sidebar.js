@@ -7,11 +7,13 @@ import CallIcon from "../icon/callIcon"
 import PaymentIcon from "../icon/PaymentIcon"
 import WalletIcon from "../icon/WalletIcon"
 import PricingIcon from "../icon/PricingIcon"
+import Avatar from "../images/avatar.png" 
 import { Link } from "react-router-dom"
 const Sidebar = () => {
 const navbarClick = useContext(menuContext).navbarClick;
 const expandWidth = useContext(menuContext).expandWidth;
 const setExpandWidth = useContext(menuContext).setExpandWidth;  
+const sidebarMenu = `text-md ${expandWidth ? 'block' : 'hidden'}`;
 const mouseEnter = () => {
     setExpandWidth(true);
 }
@@ -20,31 +22,39 @@ const mouseLeave = () => {
     setExpandWidth(false);
     }
 }
-return <div className={`bg-slate-700 transition-all duration-500 ease-linear  lg:h-5/6 h-[90vh] fixed top-18  font-bold flex flex-col  space-y-10 py-10 ${expandWidth ? 'w-58 md:w-92 lg:w-80' : 'w-20' }  ${expandWidth ? 'flex' : 'hidden md:flex'}  overflow-auto`}  onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-<Link to='/dashboard' className="text-white mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg">
+return <div className={`bg-slate-700 text-white transition-all duration-500 ease-linear  lg:h-5/6 h-[90vh] fixed top-18  font-bold flex flex-col  space-y-10 py-10 ${expandWidth ? 'w-58 md:w-92 lg:w-80' : 'w-20' }  ${expandWidth ? 'flex' : 'hidden md:flex'}  overflow-auto`}  onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+<div className="flex  overflow-x-visible w-10 space-x-4">
+<img src={Avatar}  className='w-12 h-12' alt="Avatar"/>
+<div className={`word-all ${sidebarMenu} ${expandWidth ? 'flex-col' : 'hidden'}`}>
+    <h1>Olasunkanmiusman1111@gmail.com</h1>
+    <div>Balance : #99.99</div>
+
+</div>
+</div>
+<Link to='/dashboard' className="sidebarMenuItems">
     <div> 
-    <HomeIcon className="w-10 h-10 mx-auto"/>
+    <HomeIcon className="sideBarIcons"/>
     </div>
-    <div className={`text-lg ${expandWidth ? 'block' : 'hidden'}`}>
+    <div className={sidebarMenu}>
         Dashboard
     </div>
 </Link>
-<Link to='/buydata' className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
-    <DataIcon className="w-10 h-10 mx-auto" />
-    <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>
+<Link to='/buydata' className="sidebarMenuItems"> 
+    <DataIcon className="sideBarIcons" />
+    <div className={sidebarMenu}>
         Buy Data
     </div>
 </Link>
-<Link to='/buyairtime' className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
-    <CallIcon className="w-10 h-10 mx-auto"/>
-    <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>
+<Link to='/buyairtime' className="sidebarMenuItems"> 
+    <CallIcon className="sideBarIcons"/>
+    <div className={sidebarMenu}>
         Buy Airtime
     </div>
 </Link>
-<details className="mx-auto text-white"> 
-   <summary className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg">
-    <PaymentIcon  className="w-10 h-10 mx-auto" />
-    <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>
+<details> 
+   <summary className="sidebarMenuItems">
+    <PaymentIcon  className="sideBarIcons" />
+    <div className={sidebarMenu}>
         Utilities Payment
     </div>
     </summary>
@@ -53,21 +63,21 @@ return <div className={`bg-slate-700 transition-all duration-500 ease-linear  lg
        <Link to='/cablesubscription' > Cable Subscription </Link>
     </div>
 </details>
-<div className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
-    <WalletIcon className="w-10 h-10 mx-auto" />
-    <Link className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`} to='/fundwallet'>
+<div className="sidebarMenuItems"> 
+    <WalletIcon className="sideBarIcons" />
+    <Link className={sidebarMenu} to='/fundwallet'>
         Fund Wallet
     </Link>
 </div>
-<div className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg"> 
-    <PricingIcon className="w-10 h-10 mx-auto" />
-    <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>
+<div className="sidebarMenuItems"> 
+    <PricingIcon className="sideBarIcons" />
+    <div className={sidebarMenu}>
         Pricing
     </div>
 </div>
-<div className="mx-auto cursor-pointer flex space-x-4 hover:bg-slate-500/50 p-3 hover:rounded-lg">
-    <LogoutIcon  className="w-10 h-10 mx-auto" />
-    <div className={`text-white text-lg mt-1 ${expandWidth ? 'block' : 'hidden'}`}>
+<div className="sidebarMenuItems">
+    <LogoutIcon  className="sideBarIcons" />
+    <div className={sidebarMenu}>
         Logout
     </div>
 </div>
