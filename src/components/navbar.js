@@ -17,7 +17,7 @@ const setExpandWidth = useContext(menuContext).setExpandWidth;
             setNavbarClick(false);
             }   
     }
-return <div className={`bg-blue-900 flex space-x-16 md:space-x-0 md:justify-between sticky top-0 left-0 w-full text-white pt-6`}>
+return <div className={`bg-blue-900 flex space-x-20 md:space-x-0 md:justify-between sticky top-0 left-0 w-full text-white pt-6`}>
     <div className={`border-b-2 bg-blue-800/75 p-4   border-0  h-18 ${expandWidth ? 'w-2/3 md:w-1/3 lg:w-80' : 'w-20' }`} id='menu'>     <ThreedotIcon  onClick={toggleMenuClick} className={`w-10 h-8 cursor-pointer ${expandWidth ? 'hidden' : 'block' }`} />
     <div className={`space-x-16  ${expandWidth ? 'flex' : 'hidden'}`} id="hambergMenu">
         <div className={`text-xl hidden md:block`}>Welcome</div>
